@@ -8,11 +8,10 @@ Process:
  - Html is returned and parsed into Clojure data
 
 ** Usage
-get-week-movies
 #+BEGIN_SRC clojure
-(get-week-movies)
+  (get-week-movies)
 
-;; =>
+  ;; =>
   ([:movie-id
     "253927"
     :title
@@ -32,9 +31,8 @@ get-week-movies
 #+END_SRC
 
 
-(bill-get-bill-movies)
 #+BEGIN_SRC clojure
-  (bill-get-bill-movies)
+  (get-bill-movies)
 
   ;; =>
   ([:movie-id
@@ -79,25 +77,28 @@ get-week-movies
 
 
 #+BEGIN_SRC clojure
-(get-top-week-series)
+  (get-top-week-series)
 
-;; =>
-([:id
-  "18045"
-  :title
-  "Good Doctor"
-  :url
-  "/series/ficheserie_gen_cserie=18045.html"
-  :description
-  "Drame, Médical"]
- [:id
-  "18045"
-  :title
-  "La Casa de Papel"
-  :url
-  "/series/ficheserie_gen_cserie=21504.html"
-  :description
-  "Drame, Thriller"])
+  ;; =>
+  ([:movie-id
+    "18045"
+    :title
+    "Good Doctor"
+    :url
+    "/series/ficheserie_gen_cserie=18045.html"
+    :description
+    "Drame, Médical"
+    :thumb-url
+    "http://fr.web.img2.acsta.net/c_150_200/pictures/17/06/08/12/30/082048.jpg"]
+   [:movie-id
+    "18045"
+    :title
+    "La Casa de Papel"
+    :url
+    "/series/ficheserie_gen_cserie=21504.html"
+    :description
+    "Drame, Thriller"
+    :thumb-url "http://fr.web.img4.acsta.net/f_png/c_150_200/o_logo-netflix-n.png_5_se/pictures/17/05/03/08/45/266320.jpg?coixp=50&coiyp=40"])
 #+END_SRC
 
 ** License
