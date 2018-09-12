@@ -11,71 +11,94 @@ Process:
 get-week-movies
 #+BEGIN_SRC clojure
 (get-week-movies)
+
 ;; =>
-;; ([:movie-id
-;;   "253927"
-;;   :title
-;;   "Première année"
-;;   :author
-;;   "De Thomas Lilti"
-;;   :thumb-url
-;;   "http://fr.web.img5.acsta.net/c_150_200/pictures/18/05/14/17/51/5693900.jpg"]
-;;  [:movie-id
-;;   "250824"
-;;   :title
-;;   "Mademoiselle de Joncquières"
-;;   :author
-;;   "De Emmanuel Mouret"
-;;   :thumb-url
-;;   "http://fr.web.img3.acsta.net/c_150_200/pictures/18/08/01/11/38/4214720.jpg"]
-;;  ...)
+  ([:movie-id
+    "253927"
+    :title
+    "Première année"
+    :author
+    "De Thomas Lilti"
+    :thumb-url
+    "http://fr.web.img5.acsta.net/c_150_200/pictures/18/05/14/17/51/5693900.jpg"]
+   [:movie-id
+    "250824"
+    :title
+    "Mademoiselle de Joncquières"
+    :author
+    "De Emmanuel Mouret"
+    :thumb-url
+    "http://fr.web.img3.acsta.net/c_150_200/pictures/18/08/01/11/38/4214720.jpg"])
 #+END_SRC
 
 
 (bill-get-bill-movies)
 #+BEGIN_SRC clojure
-(bill-get-bill-movies)
-;; =>
-;; [:movie-id
-;;   "257873"
-;;   :title
-;;   "Les Vieux fourneaux"
-;;   :author
-;;   "De Christophe Duthuron"
-;;   :thumb-url
-;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/06/22/10/34/5956729.jpg"]
-;;  [:movie-id
-;;   "58275"
-;;   :title
-;;   "En eaux troubles"
-;;   :author
-;;   "De Jon Turteltaub"
-;;   :thumb-url
-;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/07/12/17/23/0011138.jpg"]
-;; ...
-#+END_SRC
+  (bill-get-bill-movies)
+
+  ;; =>
+  ([:movie-id
+    "257873"
+    :title
+    "Les Vieux fourneaux"
+    :author
+    "De Christophe Duthuron"
+    :thumb-url
+    "http://fr.web.img4.acsta.net/c_150_200/pictures/18/06/22/10/34/5956729.jpg"]
+   [:movie-id
+    "58275"
+    :title
+    "En eaux troubles"
+    :author
+    "De Jon Turteltaub"
+    :thumb-url
+    "http://fr.web.img4.acsta.net/c_150_200/pictures/18/07/12/17/23/0011138.jpg"])
+  #+END_SRC
 
 
-(get-incoming)
+
 #+BEGIN_SRC clojure
-(get-incoming)
-;; =>
-;; ([:movie-id
-;;   "240435"
-;;   :movie-title
-;;   "Les Frères Sisters"
-;;   :movie-url
-;;   "/film/fichefilm_gen_cfilm=240435.html"]
-;;  [:movie-id
-;;   "248258"
-;;   :movie-title
-;;   "La Nonne"
-;;   :movie-url
-;;   "/film/fichefilm_gen_cfilm=248258.html"]
-;; ...
+  (get-incoming)
+
+  ;; =>
+  ([:movie-id
+    "240435"
+    :movie-title
+    "Les Frères Sisters"
+    :movie-url
+    "/film/fichefilm_gen_cfilm=240435.html"]
+   [:movie-id
+    "248258"
+    :movie-title
+    "La Nonne"
+    :movie-url
+    "/film/fichefilm_gen_cfilm=248258.html"])
+
 #+END_SRC
 
 
+
+#+BEGIN_SRC clojure
+(get-top-week-series)
+
+;; =>
+([:id
+  "18045"
+  :title
+  "Good Doctor"
+  :url
+  "/series/ficheserie_gen_cserie=18045.html"
+  :description
+  "Drame, Médical"]
+ [:id
+  "18045"
+  :title
+  "La Casa de Papel"
+  :url
+  "/series/ficheserie_gen_cserie=21504.html"
+  :description
+  "Drame, Thriller"])
+#+END_SRC
 
 ** License
 

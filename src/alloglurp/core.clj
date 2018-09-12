@@ -25,8 +25,8 @@ breaks"
 
 (defn get-html-rows [url selector]
   (html/select
-       (html/html-snippet (get-html-from-phantomjs-memoize url))
-       selector))
+   (html/html-snippet (get-html-from-phantomjs-memoize url))
+   selector))
 
 
 ;; ----------------- movie
@@ -47,21 +47,21 @@ breaks"
 
 (defn movie-author [week-movies i]
   (-> week-movies
-     (nth i)
-     (html/select [:.roller-item :.meta-description])
-     first :content first cleanup))
+      (nth i)
+      (html/select [:.roller-item :.meta-description])
+      first :content first cleanup))
 
 (defn movie-author [week-movies i]
   (-> week-movies
-     (nth i)
-     (html/select [:.roller-item :.meta-description])
-     first :content first cleanup))
+      (nth i)
+      (html/select [:.roller-item :.meta-description])
+      first :content first cleanup))
 
 (defn movie-image-url [week-movies i]
   (-> week-movies
-     (nth i)
-     (html/select [:.roller-item :img])
-     first :attrs :src))
+      (nth i)
+      (html/select [:.roller-item :img])
+      first :attrs :src))
 
 (defn movie-row [week-movies i]
   [:movie-id (movie-id week-movies i)
@@ -99,13 +99,13 @@ breaks"
 
 (defn incoming-title [html-rows i]
   (-> html-rows
-     (nth i)
-     :content first cleanup))
+      (nth i)
+      :content first cleanup))
 
 (defn incoming-url [html-rows i]
   (-> html-rows
-     (nth i)
-     :attrs :href))
+      (nth i)
+      :attrs :href))
 
 (defn incoming-row [html-rows i]
   [:movie-id (incoming-id html-rows i)
@@ -118,3 +118,47 @@ breaks"
 
 ;; ----------------- Incoming tests
 (get-incoming)
+
+
+
+;; ----------------- Top week series
+(def top-week-series (get-html-rows
+                      "http://www.allocine.fr/"
+                      [:.mdl-inside :.row :.card]))
+
+(defn top-week-series-id [html-rows i]
+  (when-let [id (re-find #"/series/ficheserie_gen_cserie=(\d+).html"
+                         (-> top-week-series
+                             (nth 0)
+                             (html/select [:.meta :a])
+                             first :attrs :href))]
+    (second id)))
+
+(defn top-week-series-title [html-rows i]
+  (-> html-rows
+      (nth i)
+      (html/select [:.meta :a])
+      first :attrs :title cleanup))
+
+(defn top-week-series-href [html-rows i]
+  (-> html-rows
+      (nth i)
+      (html/select [:.meta :a])
+      first :attrs :href))
+
+(defn top-week-series-description [html-rows i]
+  (-> html-rows
+      (nth i)
+      (html/select [:.meta-description])
+      first :content first cleanup))
+
+(defn top-week-series-row [html-rows i]
+  [:id (top-week-series-id html-rows i)
+   :title (top-week-series-title html-rows i)
+   :url (top-week-series-href html-rows i)
+   :description (top-week-series-description html-rows i)])
+
+(defn get-top-week-series []
+  (map #(top-week-series-row top-week-series %) (range (count top-week-series))))
+
+(get-top-week-series)
