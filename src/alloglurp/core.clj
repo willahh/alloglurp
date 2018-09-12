@@ -13,6 +13,7 @@ breaks"
       (clojure.string/replace #" +$" "")
       (clojure.string/replace #"^ +" "")))
 
+
 ;; ----------------- utils
 (defn get-html-from-phantomjs [url]
   (do
@@ -26,6 +27,7 @@ breaks"
   (html/select
        (html/html-snippet (get-html-from-phantomjs-memoize url))
        selector))
+
 
 ;; ----------------- movie
 (defn movie-id [week-movies i]
@@ -78,46 +80,11 @@ breaks"
   (map #(movie-row bill-movies %) (range (count bill-movies))))
 
 
+
 ;; ----------------- Tests
 (get-week-movies)
-;; =>
-;; ([:movie-id
-;;   "253927"
-;;   :title
-;;   "Première année"
-;;   :author
-;;   "De Thomas Lilti"
-;;   :thumb-url
-;;   "http://fr.web.img5.acsta.net/c_150_200/pictures/18/05/14/17/51/5693900.jpg"]
-;;  [:movie-id
-;;   "250824"
-;;   :title
-;;   "Mademoiselle de Joncquières"
-;;   :author
-;;   "De Emmanuel Mouret"
-;;   :thumb-url
-;;   "http://fr.web.img3.acsta.net/c_150_200/pictures/18/08/01/11/38/4214720.jpg"]
-;;  ...)
-
 (bill-get-bill-movies)
-;; =>
-;; [:movie-id
-;;   "257873"
-;;   :title
-;;   "Les Vieux fourneaux"
-;;   :author
-;;   "De Christophe Duthuron"
-;;   :thumb-url
-;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/06/22/10/34/5956729.jpg"]
-;;  [:movie-id
-;;   "58275"
-;;   :title
-;;   "En eaux troubles"
-;;   :author
-;;   "De Jon Turteltaub"
-;;   :thumb-url
-;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/07/12/17/23/0011138.jpg"]
-;; ...
+
 
 
 ;; ----------------- Incoming
@@ -147,6 +114,7 @@ breaks"
 
 (defn get-incoming []
   (map #(incoming-row incoming-html-rows %) (range (count incoming-html-rows))))
+
 
 ;; ----------------- Incoming tests
 (get-incoming)
