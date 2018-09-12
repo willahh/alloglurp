@@ -251,8 +251,13 @@ breaks"
                    (filter (fn [m]
                              (and (:href m)
                                   (re-find #"/film/fichefilm_gen_cfilm=(\w+).html" (:href m))))
-                           (map #(:attrs %) (-> movie
-                                                (html/select [:.rubric :.totalwidth :a]))))
+                           (let [links (map #(:attrs %) (-> movie
+                                                            (html/select [:.rubric :.totalwidth :a])))]
+                             links))
                    distinct first :href)]
     (when-let [id (re-find #"/film/fichefilm_gen_cfilm=(\d+).html" found-url)]
       (second id))))
+
+
+
+
