@@ -13,6 +13,7 @@ breaks"
       (clojure.string/replace #" +$" "")
       (clojure.string/replace #"^ +" "")))
 
+;; ----------------- utils
 (defn get-html-from-phantomjs [url]
   (do
     (set-driver! (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))}))
@@ -26,13 +27,15 @@ breaks"
        (html/html-snippet (get-html-from-phantomjs-memoize url))
        selector))
 
+;; ----------------- movie
 (defn movie-id [week-movies i]
-  (if-let [id (re-find #"/seance/film-(\d+)" (-> week-movies
-                                                (nth i)
-                                                (html/select [:.roller-item :a])
-                                                first :attrs :href))]
-  (nth id 1)
-  "-"))
+  (if-let [id (re-find #"/seance/film-(\d+)"
+                       (-> week-movies
+                           (nth i)
+                           (html/select [:.roller-item :a])
+                           first :attrs :href))]
+    (nth id 1)
+    "-"))
 
 (defn movie-title [week-movies i]
   (-> week-movies
@@ -65,8 +68,7 @@ breaks"
    :thumb-url (movie-image-url week-movies i)])
 
 
-
-;; Get formatted data
+;; ----------------- Formated data
 (def week-movies (get-html-rows "http://www.allocine.fr/" [:#roller-1 :.roller-item]))
 (defn get-week-movies []
   (map #(movie-row week-movies %) (range (count week-movies))))
@@ -76,6 +78,75 @@ breaks"
   (map #(movie-row bill-movies %) (range (count bill-movies))))
 
 
-;; Tests
+;; ----------------- Tests
 (get-week-movies)
+;; =>
+;; ([:movie-id
+;;   "253927"
+;;   :title
+;;   "Première année"
+;;   :author
+;;   "De Thomas Lilti"
+;;   :thumb-url
+;;   "http://fr.web.img5.acsta.net/c_150_200/pictures/18/05/14/17/51/5693900.jpg"]
+;;  [:movie-id
+;;   "250824"
+;;   :title
+;;   "Mademoiselle de Joncquières"
+;;   :author
+;;   "De Emmanuel Mouret"
+;;   :thumb-url
+;;   "http://fr.web.img3.acsta.net/c_150_200/pictures/18/08/01/11/38/4214720.jpg"]
+;;  ...)
+
 (bill-get-bill-movies)
+;; =>
+;; [:movie-id
+;;   "257873"
+;;   :title
+;;   "Les Vieux fourneaux"
+;;   :author
+;;   "De Christophe Duthuron"
+;;   :thumb-url
+;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/06/22/10/34/5956729.jpg"]
+;;  [:movie-id
+;;   "58275"
+;;   :title
+;;   "En eaux troubles"
+;;   :author
+;;   "De Jon Turteltaub"
+;;   :thumb-url
+;;   "http://fr.web.img4.acsta.net/c_150_200/pictures/18/07/12/17/23/0011138.jpg"]
+;; ...
+
+
+;; ----------------- Incoming
+(def incoming-html-rows (get-html-rows "http://www.allocine.fr/" [:.list-movie-hp :.list-entity-item :a.list-entity-item-link]))
+(defn incoming-id [html-rows i]
+  (if-let [id (re-find #"/film/fichefilm_gen_cfilm=(\d+).html"
+                       (-> html-rows
+                           (nth i)
+                           :attrs :href))]
+    (second id)
+    "-"))
+
+(defn incoming-title [html-rows i]
+  (-> html-rows
+     (nth i)
+     :content first cleanup))
+
+(defn incoming-url [html-rows i]
+  (-> html-rows
+     (nth i)
+     :attrs :href))
+
+(defn incoming-row [html-rows i]
+  [:movie-id (incoming-id html-rows i)
+   :movie-title (incoming-title html-rows i)
+   :movie-url (incoming-url html-rows i)])
+
+(defn get-incoming []
+  (map #(incoming-row incoming-html-rows %) (range (count incoming-html-rows))))
+
+;; ----------------- Incoming tests
+(get-incoming)

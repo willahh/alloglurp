@@ -384,3 +384,78 @@
 [INFO  - 2018-09-12T19:39:53.767Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2018-09-12T19:40:07.231Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2018-09-12T19:40:09.801Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T19:57:22.974Z] GhostDriver - Main - running on port 39109
+[INFO  - 2018-09-12T19:57:22.983Z] GhostDriver - Main - running on port 35835
+[INFO  - 2018-09-12T19:57:22.997Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-12T19:57:22.997Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.customHeaders:  - {}
+[INFO  - 2018-09-12T19:57:22.997Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-12T19:57:22.997Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 10698210-b6c6-11e8-aa22-5d6042a5444b
+[INFO  - 2018-09-12T19:57:23.495Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-12T19:57:23.495Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.customHeaders:  - {}
+[INFO  - 2018-09-12T19:57:23.495Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-12T19:57:23.496Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 10b57f30-b6c6-11e8-9c1e-671dfcefe431
+[ERROR - 2018-09-12T19:57:28.875Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-12T19:57:28.875Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-12T19:57:28.877Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-12T19:57:28.877Z] Session [10698210-b6c6-11e8-aa22-5d6042a5444b] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-12T19:57:29.059Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-12T19:57:29.059Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-12T19:57:29.062Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-12T19:57:29.062Z] Session [10b57f30-b6c6-11e8-9c1e-671dfcefe431] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[INFO  - 2018-09-12T19:57:36.489Z] GhostDriver - Main - running on port 31997
+[INFO  - 2018-09-12T19:57:36.967Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-12T19:57:36.967Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.customHeaders:  - {}
+[INFO  - 2018-09-12T19:57:36.967Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-12T19:57:36.967Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 18bd2930-b6c6-11e8-ac7e-77d4f0f76bef
+[ERROR - 2018-09-12T19:57:41.518Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-12T19:57:41.518Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-12T19:57:41.520Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-12T19:57:41.521Z] Session [18bd2930-b6c6-11e8-ac7e-77d4f0f76bef] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[INFO  - 2018-09-12T19:57:52.318Z] GhostDriver - Main - running on port 35712
+[INFO  - 2018-09-12T19:57:52.826Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-12T19:57:52.826Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.customHeaders:  - {}
+[INFO  - 2018-09-12T19:57:52.826Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-12T19:57:52.826Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 2230e650-b6c6-11e8-bb1c-bf94fc444bf0
+[INFO  - 2018-09-12T19:57:53.642Z] GhostDriver - Main - running on port 16973
+[INFO  - 2018-09-12T19:57:54.134Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-12T19:57:54.134Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.customHeaders:  - {}
+[INFO  - 2018-09-12T19:57:54.134Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-12T19:57:54.134Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf
+[ERROR - 2018-09-12T19:57:57.994Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-12T19:57:57.994Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-12T19:57:57.996Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-12T19:57:57.996Z] Session [22f8a320-b6c6-11e8-8c2b-fdc415b4ecbf] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-12T19:57:58.954Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-12T19:57:58.954Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-12T19:57:58.956Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-12T19:57:58.956Z] Session [2230e650-b6c6-11e8-bb1c-bf94fc444bf0] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[INFO  - 2018-09-12T20:02:22.965Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:02:22.974Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:02:36.483Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:02:52.312Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:02:53.632Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:07:22.958Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:07:22.965Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:07:36.475Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:07:52.306Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:07:53.624Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:12:22.951Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:12:22.956Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:12:36.469Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:12:52.303Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:12:53.616Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:17:22.942Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:17:22.947Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:17:36.460Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:17:52.294Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-12T20:17:53.607Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
