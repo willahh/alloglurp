@@ -101,6 +101,62 @@ Process:
     :thumb-url "http://fr.web.img4.acsta.net/f_png/c_150_200/o_logo-netflix-n.png_5_se/pictures/17/05/03/08/45/266320.jpg?coixp=50&coiyp=40"])
 #+END_SRC
 
+
+Find a movie by query
+#+BEGIN_SRC clojure
+  (do (let [movie-id (core/find-movie-id-from-query "Las vegas parano")]
+        (Thread/sleep 1000)
+        (core/get-movie-detail movie-id)))
+
+  ;; =>
+  [:movie-name
+   "Las Vegas parano"
+   :release-date
+   "19 août 1998"
+   :actors
+   ["Christina Ricci" "Ellen Barkin" "Gary Busey"]
+   :genre
+   "Comédie"
+   :nationality
+   "américain"
+   :press-eval
+   "3,8"
+   :spectator-eval
+   "--"
+   :friend-eval
+   "5,0"
+   :synopsis
+   ""
+   :thumb-url
+   "http://fr.web.img6.acsta.net/c_215_290/pictures/13/12/27/15/30/172720.jpg"]
+#+END_SRC
+
+#+BEGIN_SRC clojure
+  (do (let [movie-id (core/find-movie-id-from-query "Batman")]
+        (Thread/sleep 1000)
+        (core/get-movie-detail movie-id)))
+  [:movie-name
+   "Batman"
+   :release-date
+   "13 septembre 1989"
+   :actors
+   ["Jack Palance" "Michael Keaton" "Kim Basinger" " plus "]
+   :genre
+   "Fantastique"
+   :nationality
+   "britannique"
+   :press-eval
+   "4,0"
+   :spectator-eval
+   "3,9"
+   :friend-eval
+   "--"
+   :synopsis
+   ""
+   :thumb-url
+   "http://fr.web.img6.acsta.net/c_215_290/pictures/17/11/03/16/30/4890192.jpg"]
+#+END_SRC
+
 ** License
 
 Copyright © 2018 William Ravel
