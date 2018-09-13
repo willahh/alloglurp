@@ -81,12 +81,6 @@ breaks"
 (defn get-bill-movies []
   (map #(movie-row bill-movies %) (range (count bill-movies))))
 
-;; test
-(get-week-movies)
-(get-bill-movies)
-
-
-
 ;; ----------------- Incoming
 (def incoming-html-rows (get-html-rows "http://www.allocine.fr/" [:.list-movie-hp :.list-entity-item :a.list-entity-item-link]))
 (defn- incoming-id [html-rows i]
@@ -114,11 +108,6 @@ breaks"
 
 (defn get-incoming []
   (map #(incoming-row incoming-html-rows %) (range (count incoming-html-rows))))
-
-;; test
-(get-incoming)
-
-
 
 
 
@@ -168,10 +157,6 @@ breaks"
 
 (defn get-top-week-series []
   (map #(top-week-series-row top-week-series %) (range (count top-week-series))))
-
-;; test
-(get-top-week-series)
-
 
 
 
@@ -257,7 +242,3 @@ breaks"
                    distinct first :href)]
     (when-let [id (re-find #"/film/fichefilm_gen_cfilm=(\d+).html" found-url)]
       (second id))))
-
-
-
-
