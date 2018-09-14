@@ -6,4 +6,7 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [enlive "1.1.6"]
                  [clj-webdriver/clj-webdriver "0.6.0"]
-                 [com.github.detro.ghostdriver/phantomjsdriver "1.0.3"]])
+                 [com.github.detro.ghostdriver/phantomjsdriver "1.0.3"]
+                 [org.clojure/java.jdbc "0.7.5"]
+                 [sqlitejdbc "0.5.6"]
+                 [korma "0.4.3"]])
