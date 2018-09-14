@@ -1,29 +1,12 @@
-(ns alloglurp.allo-scrapper
+(ns alloglurp.allo-scrapper.movie
   (:require [net.cgrand.enlive-html :as html]
             [clojure.string :as str])
   (:use [clj-webdriver.taxi]
-        [clj-webdriver.driver :only [init-driver]]))
+        [clj-webdriver.driver :only [init-driver]]
+        [alloglurp.allo-scrapper.scrapper-helper]))
 
 (import 'org.openqa.selenium.phantomjs.PhantomJSDriver
         'org.openqa.selenium.remote.DesiredCapabilities)
-
-;; Initialize a phantomjs instance
-(set-driver! (init-driver {:webdriver (PhantomJSDriver. (DesiredCapabilities.))}))
-
-(defn- cleanup [str]
-  "Removes excess spaces at the beginning and end of the chain, as well as line
-breaks"
-  (if str (-> (clojure.string/replace str #"\n" "")
-              (clojure.string/replace #" +$" "")
-              (clojure.string/replace #"^ +" ""))
-      ""))
-
-(defn- get-html-from-phantomjs [url]
-  (do
-    (to url)
-    (html "body")))
-
-(def get-html-from-phantomjs-memoize (memoize get-html-from-phantomjs))
 
 (defn- get-html-rows [url selector]
   (html/select

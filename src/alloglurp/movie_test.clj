@@ -16,3 +16,4 @@
 ;; (movie-process/find-movie-and-insert "Forest gump")
 ;; (movie-process/find-movie-and-insert "Django Unchained")
 ;; (movie-process/find-movie-and-insert "Vice Versa")
+(movie-process/find-movie-and-insert "Your name")

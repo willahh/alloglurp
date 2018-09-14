@@ -1,8 +1,6 @@
-(ns alloglurp.movie-process)
-
 (ns alloglurp.movie-process
-  (:require [alloglurp.movie-dao :as movie-dao]
-            [alloglurp.allo-scrapper :as allo-scrapper]))
+  (:require [alloglurp.allo-scrapper.movie :as allo-scrapper]
+            [alloglurp.movie-dao :as movie-dao]))
 
 (defn now []
   (.format (new java.text.SimpleDateFormat "yyyy-MM-dd hh:mm:ss")
