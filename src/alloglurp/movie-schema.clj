@@ -26,3 +26,8 @@
   (table :allo_movie)
   (database alloglurp)
   (entity-fields :id :alloid :createDate :updateDate :createDate :title :description :genre :imageUrl :pressEval :specEval))
+
+
+
+
+
