@@ -184,7 +184,8 @@ breaks"
 (defn get-movie-detail [movie-id]
   (let [url (str/join ["http://www.allocine.fr/film/fichefilm_gen_cfilm=" movie-id ".html"])
         movie-detail (html/html-snippet (get-html-from-phantomjs-memoize url))]
-    [:movie-name (try (-> movie-detail
+    {:movie-id movie-id
+     :movie-name (try (-> movie-detail
                           (html/select [:.section-wrap :.titlebar-title])
                           first :content first cleanup)
                       (catch Exception e "-"))
@@ -219,7 +220,7 @@ breaks"
      :thumb-url (try (-> movie-detail
                          (html/select [:.card-movie-overview :.thumbnail-img])
                          first :attrs :src)
-                     (catch Exception e "-"))]))
+                     (catch Exception e "-"))}))
 
 
 

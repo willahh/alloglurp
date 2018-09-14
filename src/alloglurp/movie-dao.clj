@@ -8,5 +8,8 @@
 
 (defn insert! [record]
   "Insert a record into database."
-  (insert allo-movie
+  (insert movie-schema/allo-movie
           (values record)))
+
+
+
