@@ -1,12 +1,9 @@
 (ns alloglurp.db
-  (:require [clojure.java.jdbc :as jdbc])
-  (:use [korma.core]))
+  (:require [clojure.java.jdbc :as jdbc]
+            [wlh.helper.db-helper :as db-helper])
+  (:use korma.db
+        korma.core))
 
-;; (defdb db (sqlite3 {:db "resources/databases/allocine.db"}))
-
-;; Schema
-(defentity glu-movie
-  (table :glu_movie)
-  (database glurps)
-  (entity-fields :name :group_id :create_date :update_date :active :fav))
-
+(def db {:classname "org.sqlite.JDBC"
+         :subprotocol "sqlite"
+         :subname "resources/databases/allocine.db"})
