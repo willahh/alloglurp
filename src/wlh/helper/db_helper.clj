@@ -48,15 +48,6 @@
                            limit
                            offset)))))
 
-;; (defn create-table [db table]
-;;   (let [name (:name table)
-;;         columns (:jdbc-columns table)]
-;;     (jdbc/db-do-commands db 
-;;                          (clojure.string/lower-case 
-;;                           (jdbc/create-table-ddl name columns
-;;                                                  {:table-spec "ENGINE=InnoDB"
-;;                                                   :entities clojure.string/upper-case})))))
-
 (defn drop-table [db table]
   (jdbc/db-do-commands db (jdbc/drop-table-ddl table)))
 
