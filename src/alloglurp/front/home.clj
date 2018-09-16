@@ -3,26 +3,41 @@
             [hiccup.core :as core]
             [alloglurp.process.movie.movie :as movie]
             [alloglurp.component.card :as card]
-            [alloglurp.model.movie.movie-dao :as movie-dao]))
+            [alloglurp.model.movie.movie-dao :as movie-dao]
+            [clojure.string :as str]))
+
+(defn ellipsis [str cnt]
+  (if (> (count str) cnt)
+    (str/join " " (conj (into [] (take cnt (clojure.string/split
+                                            str
+                                            #" "))) "..."))
+    str))
 
 (defn map-movie-record-to-card-record [movie-record]
-  "Key order is important here."
-  {:image (movie/get-image-path-from-alloid (:alloid movie-record))
+  {:id (:alloid movie-record)
    :title (:title movie-record)
-   :meta (:description movie-record)
-   :id (:alloid movie-record)})
+   :description (ellipsis (:description movie-record) 10)
+   :image (movie/get-image-path-from-alloid (:alloid movie-record))
+   :meta (:genre movie-record)})
+
+(defn card-list [records]
+  [:div {:class "ui stackable four column grid"}
+   (let [html-records (map map-movie-record-to-card-record records)]
+     (map (fn [html-record]
+            [:div {:class "column"}
+             (apply card/card-html (map #(second %) html-record))])
+          html-records))])
 
 (defn get-html [session params]
   (main/front-page-html-wrapper
    session params
-   [:div
-    [:div "html"]
-    (let [records (take 5 (movie-dao/find-list))
-          html-records (map map-movie-record-to-card-record records)]
-      (map (fn [html-record]
-             (card/card-html (:image html-record) (:title html-record) (:meta html-record) (:id html-record)))
-           html-records))
+   [:div {:style "padding-top: 20px;"}
+    (for [genre '("Action" "Animation" "Aventure" "Biopic" "Comédie" "Comédie dramatique" "Comédie musicale" "Drame" "Epouvante-horreur" "Fantastique" "Guerre" "Historique" "Policier" "Péplum" "Romance" "Science fiction" "Thriller" "Western")]
+      (do [:div [:h3 genre]
+           (card-list (movie-dao/find-list 0 3 :alloid :ASC {:genre genre}))])) 
     [:div
      (pr-str params)]
     [:div
      (pr-str session)]]))
+
+(sort (into #{} (map :genre (movie-dao/find-list))))
