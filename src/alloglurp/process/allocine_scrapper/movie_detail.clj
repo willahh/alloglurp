@@ -35,12 +35,6 @@
       (html/select [:.roller-item :.meta-description])
       first :content first cleanup))
 
-(defn- movie-author [week-movies i]
-  (-> week-movies
-      (nth i)
-      (html/select [:.roller-item :.meta-description])
-      first :content first cleanup))
-
 (defn- movie-image-url [week-movies i]
   (-> week-movies
       (nth i)

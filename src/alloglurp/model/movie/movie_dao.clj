@@ -6,3 +6,6 @@
   "Insert a record into database."
   (insert movie-schema/allo-movie
           (values record)))
+
+(defn find-list []
+  (select movie-schema/allo-movie))
