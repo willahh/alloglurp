@@ -2,4 +2,4 @@
   (:require alloglurp.process.allocine-scrapper.movie-list
             [alloglurp.service.scrapper.scrapper-helper :as scrapper-helper]))
 
-(scrapper-helper/open-browser)
+

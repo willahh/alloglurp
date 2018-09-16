@@ -1,6 +1,7 @@
 (ns alloglurp.model.movie.movie-schema
+  (:use [korma.core])
   (:require alloglurp.service.db.db
-            [korma.core :refer :all]
+            ;; [korma.core :refer :all]
             [wlh.helper.db-helper :as db-helper]))
 
 (def allo-movie-table-config

@@ -15,8 +15,11 @@
         record (map-allo-data-to-record allo-data)]
     (movie-dao/insert! record)))
 
+(defn get-image-path-from-alloid [alloid]
+  (str/join ["asset/image/" alloid "_thumb" ".jpg"]))
+
 (defn create-thumb-image-from-alloid [alloid]
-  (let [image-name (str/join ["resources/public/asset/image/" alloid "_thumb" ".jpg"])
+  (let [image-name ((get-image-path-from-alloid alloid))
         file (clojure.java.io/as-file image-name)]
     (when-not (.exists file)
       (clojure.java.io/copy

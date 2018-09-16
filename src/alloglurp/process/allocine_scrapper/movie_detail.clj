@@ -1,4 +1,4 @@
-(ns alloglurp.process.allocine-scrapper.movie-detail
+(ns alloglurp.process.allocine-scrapper.movie-detail 
   (:require [alloglurp.service.scrapper.scrapper-helper :refer :all]
             [clj-webdriver.driver :refer :all]
             [clj-webdriver.taxi :refer :all]
@@ -7,6 +7,8 @@
 
 (import 'org.openqa.selenium.phantomjs.PhantomJSDriver
         'org.openqa.selenium.remote.DesiredCapabilities)
+
+(open-browser)
 
 (defn- get-html-rows [url selector]
   (html/select
@@ -49,13 +51,14 @@
 
 
 ;; ----------------- Formated data
-(def week-movies (get-html-rows "http://www.allocine.fr/" [:#roller-1 :.roller-item]))
 (defn get-week-movies []
+  (def week-movies (get-html-rows "http://www.allocine.fr/" [:#roller-1 :.roller-item]))
   (map #(movie-row week-movies %) (range (count week-movies))))
 
-(def bill-movies (get-html-rows "http://www.allocine.fr/" [:#roller-2 :.roller-item]))
 (defn get-bill-movies []
+  (def bill-movies (get-html-rows "http://www.allocine.fr/" [:#roller-2 :.roller-item]))
   (map #(movie-row bill-movies %) (range (count bill-movies))))
+
 
 ;; ----------------- Incoming
 (def incoming-html-rows (get-html-rows "http://www.allocine.fr/" [:.list-movie-hp :.list-entity-item :a.list-entity-item-link]))
