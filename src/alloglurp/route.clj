@@ -5,14 +5,14 @@
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [compojure.handler :as handler]
             [compojure.route :as route]
-            [alloglurp.front.main :as front-main]
+            [alloglurp.front.home :as home]
             [alloglurp.api.api :as api]))
 
 (def site-routes
   (wrap-defaults
    (routes
     (context "/site" []
-             (GET "/" [params session] (front-main/get-html session params))
+             (GET "/" [params session] (home/get-html session params))
              (context "/movie" []
                       (GET "/" [] "aa")
                       (GET "/:alloid" [alloid] "bb"))))

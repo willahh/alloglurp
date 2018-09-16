@@ -1,0 +1,6 @@
+[submodule "ressources"]
+	path = ressources
+	url = https://github.com/willahh/alloglurp_ressources.git
+[submodule "resources"]
+	path = resources
+	url = https://github.com/willahh/alloglurp_ressources.git
