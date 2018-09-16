@@ -2690,3 +2690,241 @@
 [INFO  - 2018-09-15T22:07:56.384Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2018-09-15T22:10:03.480Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2018-09-15T22:38:27.672Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:40:34.772Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:43:27.662Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:45:34.762Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:48:27.653Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:50:34.758Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:53:27.644Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:55:34.758Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T22:58:27.636Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:00:34.755Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:03:18.323Z] GhostDriver - Main - running on port 39685
+[INFO  - 2018-09-15T23:03:18.757Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:03:18.757Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:03:18.757Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:03:18.757Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 89007e00-b93b-11e8-9f8d-5f9302cd84dd
+[INFO  - 2018-09-15T23:03:27.628Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:05:34.750Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:08:18.579Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:08:27.619Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:10:34.746Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:13:18.570Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:13:27.612Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:15:34.742Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:18:18.561Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:18:27.602Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2018-09-15T23:20:26.389Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:20:26.389Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=259337.html:7)
+[ERROR - 2018-09-15T23:20:26.391Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:20:26.391Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=259337.html:11)
+[ERROR - 2018-09-15T23:20:27.552Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:20:27.552Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[INFO  - 2018-09-15T23:20:34.734Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:23:18.553Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:23:27.596Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2018-09-15T23:24:32.725Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:24:32.725Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-15T23:24:32.727Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:24:32.728Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-15T23:24:33.793Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:24:33.793Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[ERROR - 2018-09-15T23:24:33.958Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:24:33.958Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-15T23:24:33.961Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:24:33.961Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[ERROR - 2018-09-15T23:24:37.785Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: InvalidStateError: DOM Exception 11: An attempt was made to use an object that is not, or is no longer, usable.
+[ERROR - 2018-09-15T23:24:37.785Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  onreadystatechange (https://s0.2mdn.net/4341864/1491821328172/script/fluxLOTO.js:82)
+  open (:0)
+  getFlux (https://s0.2mdn.net/4341864/1491821328172/script/fluxLOTO.js:16)
+  initFlux (https://s0.2mdn.net/4341864/1491821328172/index.html:435)
+  onload (https://s0.2mdn.net/4341864/1491821328172/index.html:550)
+[INFO  - 2018-09-15T23:24:44.965Z] GhostDriver - Main - running on port 46333
+[ERROR - 2018-09-15T23:24:45.379Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:24:45.379Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-15T23:24:45.387Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:24:45.387Z] Session [89007e00-b93b-11e8-9f8d-5f9302cd84dd] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[INFO  - 2018-09-15T23:24:45.478Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:24:45.478Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:24:45.478Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:24:45.478Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 87f28910-b93e-11e8-8a65-8f272c73ac4f
+[INFO  - 2018-09-15T23:25:34.725Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2018-09-15T23:25:48.562Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:25:48.562Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-15T23:25:48.565Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:25:48.566Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[ERROR - 2018-09-15T23:25:48.841Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:25:48.841Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[INFO  - 2018-09-15T23:25:56.757Z] GhostDriver - Main - running on port 48754
+[INFO  - 2018-09-15T23:25:57.251Z] Session [b2ba60f0-b93e-11e8-bf87-e987b4345ba5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:25:57.251Z] Session [b2ba60f0-b93e-11e8-bf87-e987b4345ba5] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:25:57.251Z] Session [b2ba60f0-b93e-11e8-bf87-e987b4345ba5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:25:57.251Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b2ba60f0-b93e-11e8-bf87-e987b4345ba5
+[ERROR - 2018-09-15T23:25:57.420Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: InvalidStateError: DOM Exception 11: An attempt was made to use an object that is not, or is no longer, usable.
+[ERROR - 2018-09-15T23:25:57.420Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  onreadystatechange (https://s0.2mdn.net/4341864/1491830492309/script/fluxLOTO.js:82)
+  open (:0)
+  getFlux (https://s0.2mdn.net/4341864/1491830492309/script/fluxLOTO.js:16)
+  initFlux (https://s0.2mdn.net/4341864/1491830492309/index.html:395)
+  onload (https://s0.2mdn.net/4341864/1491830492309/index.html:508)
+[ERROR - 2018-09-15T23:25:58.690Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:25:58.690Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-15T23:25:58.692Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:25:58.692Z] Session [87f28910-b93e-11e8-8a65-8f272c73ac4f] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[INFO  - 2018-09-15T23:28:13.420Z] GhostDriver - Main - running on port 44617
+[INFO  - 2018-09-15T23:28:13.917Z] Session [042ff490-b93f-11e8-903d-33b6c37ab8cf] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:28:13.917Z] Session [042ff490-b93f-11e8-903d-33b6c37ab8cf] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:28:13.917Z] Session [042ff490-b93f-11e8-903d-33b6c37ab8cf] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:28:13.917Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 042ff490-b93f-11e8-903d-33b6c37ab8cf
+[INFO  - 2018-09-15T23:28:18.545Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:28:27.590Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:29:44.955Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:30:16.251Z] GhostDriver - Main - running on port 27583
+[INFO  - 2018-09-15T23:30:16.750Z] Session [4d66c8a0-b93f-11e8-95d0-17d11ce1bce5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:30:16.750Z] Session [4d66c8a0-b93f-11e8-95d0-17d11ce1bce5] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:30:16.750Z] Session [4d66c8a0-b93f-11e8-95d0-17d11ce1bce5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:30:16.751Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4d66c8a0-b93f-11e8-95d0-17d11ce1bce5
+[INFO  - 2018-09-15T23:30:34.720Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:30:57.534Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:34:00.395Z] GhostDriver - Main - running on port 28687
+[INFO  - 2018-09-15T23:34:00.515Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:34:00.515Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:34:00.515Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:34:00.515Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: d2c6c400-b93f-11e8-aaa7-710ad6f59910
+[ERROR - 2018-09-15T23:37:35.910Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:37:35.910Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-15T23:37:35.913Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:37:35.913Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-15T23:37:38.631Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:37:38.631Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-15T23:37:38.633Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:37:38.634Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[ERROR - 2018-09-15T23:37:41.605Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:37:41.605Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-15T23:37:41.607Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:37:41.607Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[ERROR - 2018-09-15T23:38:03.321Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:38:03.321Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=Batman:7)
+[ERROR - 2018-09-15T23:38:03.323Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:38:03.323Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=Batman:11)
+[ERROR - 2018-09-15T23:38:04.774Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:38:04.775Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[ERROR - 2018-09-15T23:38:04.857Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:38:04.857Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=4966.html:7)
+[ERROR - 2018-09-15T23:38:04.859Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:38:04.859Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=4966.html:11)
+[INFO  - 2018-09-15T23:39:00.386Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:44:00.377Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-15T23:49:00.367Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2018-09-15T23:51:24.320Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:51:24.320Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-15T23:51:24.323Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:51:24.323Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-15T23:51:26.455Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:51:26.455Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[ERROR - 2018-09-15T23:51:26.648Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:51:26.649Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-15T23:51:26.651Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:51:26.651Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[INFO  - 2018-09-15T23:51:30.225Z] GhostDriver - Main - running on port 1720
+[INFO  - 2018-09-15T23:51:30.268Z] Session [447a3580-b942-11e8-9611-ef4be2f0a508] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:51:30.268Z] Session [447a3580-b942-11e8-9611-ef4be2f0a508] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:51:30.269Z] Session [447a3580-b942-11e8-9611-ef4be2f0a508] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:51:30.269Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 447a3580-b942-11e8-9611-ef4be2f0a508
+[ERROR - 2018-09-15T23:51:30.701Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:51:30.701Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-15T23:51:30.703Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:51:30.704Z] Session [d2c6c400-b93f-11e8-aaa7-710ad6f59910] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[INFO  - 2018-09-15T23:56:17.758Z] GhostDriver - Main - running on port 15558
+[INFO  - 2018-09-15T23:56:17.875Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-15T23:56:17.875Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.customHeaders:  - {}
+[INFO  - 2018-09-15T23:56:17.875Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-15T23:56:17.875Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: efe78df0-b942-11e8-8bf9-13a501f6aae2
+[ERROR - 2018-09-15T23:56:22.712Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:56:22.713Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:7)
+[ERROR - 2018-09-15T23:56:22.716Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:56:22.716Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/:11)
+[ERROR - 2018-09-15T23:56:25.031Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:56:25.032Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-15T23:56:25.034Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:56:25.034Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[ERROR - 2018-09-15T23:56:25.328Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-15T23:56:25.328Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[ERROR - 2018-09-15T23:56:27.526Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: InvalidStateError: DOM Exception 11: An attempt was made to use an object that is not, or is no longer, usable.
+[ERROR - 2018-09-15T23:56:27.527Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  onreadystatechange (https://s0.2mdn.net/4341864/1491821328172/script/fluxLOTO.js:82)
+  open (:0)
+  getFlux (https://s0.2mdn.net/4341864/1491821328172/script/fluxLOTO.js:16)
+  initFlux (https://s0.2mdn.net/4341864/1491821328172/index.html:435)
+  onload (https://s0.2mdn.net/4341864/1491821328172/index.html:550)
+[ERROR - 2018-09-15T23:56:28.245Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-15T23:56:28.245Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-15T23:56:28.247Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-15T23:56:28.247Z] Session [efe78df0-b942-11e8-8bf9-13a501f6aae2] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[INFO  - 2018-09-16T00:01:17.748Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2018-09-16T00:01:54.184Z] GhostDriver - Main - running on port 45117
+[INFO  - 2018-09-16T00:01:54.758Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-16T00:01:54.758Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.customHeaders:  - {}
+[INFO  - 2018-09-16T00:01:54.758Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-16T00:01:54.758Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b8b3d220-b943-11e8-84be-b9429a86d2e6
+[ERROR - 2018-09-16T00:03:08.781Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-16T00:03:08.781Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:7)
+[ERROR - 2018-09-16T00:03:08.785Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-16T00:03:08.785Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/film/fichefilm_gen_cfilm=253927.html:11)
+[ERROR - 2018-09-16T00:03:09.195Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - msg: The method FB.getLoginStatus will stop working when called from http pages in 20 days.  Please update your site to use https for Facebook Login. https://developers.facebook.com/blog/post/2018/06/08/enforce-https-facebook-login/
+[ERROR - 2018-09-16T00:03:09.196Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - stack:
+  a (https://connect.facebook.net/fr_FR/sdk.js:53)
+[ERROR - 2018-09-16T00:03:12.068Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - msg: TypeError: undefined is not an object (evaluating 'Krux('get','user_segments').join')
+[ERROR - 2018-09-16T00:03:12.068Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:7)
+[ERROR - 2018-09-16T00:03:12.070Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - msg: TypeError: undefined is not an object (evaluating 'tab_segments.length')
+[ERROR - 2018-09-16T00:03:12.071Z] Session [b8b3d220-b943-11e8-84be-b9429a86d2e6] - page.onError - stack:
+  (anonymous function) (http://www.allocine.fr/recherche/?q=las+vegas+parano:11)
+[INFO  - 2018-09-16T00:03:47.220Z] GhostDriver - Main - running on port 13702
+[INFO  - 2018-09-16T00:03:47.250Z] Session [fbc0bce0-b943-11e8-bc0c-1dec9f50e386] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-09-16T00:03:47.250Z] Session [fbc0bce0-b943-11e8-bc0c-1dec9f50e386] - page.customHeaders:  - {}
+[INFO  - 2018-09-16T00:03:47.250Z] Session [fbc0bce0-b943-11e8-bc0c-1dec9f50e386] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-09-16T00:03:47.250Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: fbc0bce0-b943-11e8-bc0c-1dec9f50e386

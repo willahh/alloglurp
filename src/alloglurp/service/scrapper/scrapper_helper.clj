@@ -1,4 +1,4 @@
-(ns alloglurp.allo-scrapper.scrapper-helper
+(ns alloglurp.service.scrapper.scrapper-helper
   (:use [clj-webdriver.taxi]
         [clj-webdriver.driver :only [init-driver]]))
 

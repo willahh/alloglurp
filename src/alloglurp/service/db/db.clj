@@ -1,4 +1,4 @@
-(ns alloglurp.db
+(ns alloglurp.service.db.db
   (:require [korma.db :refer :all]))
 
 (def db {:classname "org.sqlite.JDBC"

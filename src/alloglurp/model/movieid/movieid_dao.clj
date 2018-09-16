@@ -1,6 +1,6 @@
-(ns alloglurp.movie-id
-  (:require [korma.core :refer :all]
-            [alloglurp.db :refer :all]
+(ns alloglurp.model.movieid.movieid-dao
+  (:require [alloglurp.service.db.db :refer :all]
+            [korma.core :refer :all]
             [wlh.helper.db-helper :as db-helper]))
 
 (def allo-movie-id-table-config
@@ -16,7 +16,7 @@
   (database alloglurp)
   (entity-fields :id :alloid :movieStatusId :name :url))
 
-(try (db-helper/create-table alloglurp.db/db
+(try (db-helper/create-table alloglurp.service.db.db/db
                              (:name allo-movie-id-table-config)
                              (:jdbc-columns allo-movie-id-table-config))
      (catch Exception e "Table already exist"))

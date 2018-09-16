@@ -1,9 +1,9 @@
-(ns alloglurp.allo-scrapper.movie
-  (:require [net.cgrand.enlive-html :as html]
-            [clojure.string :as str])
-  (:use [clj-webdriver.taxi]
-        [clj-webdriver.driver :only [init-driver]]
-        [alloglurp.allo-scrapper.scrapper-helper]))
+(ns alloglurp.process.allocine-scrapper.movie-detail
+  (:require [alloglurp.service.scrapper.scrapper-helper :refer :all]
+            [clj-webdriver.driver :refer :all]
+            [clj-webdriver.taxi :refer :all]
+            [clojure.string :as str]
+            [net.cgrand.enlive-html :as html]))
 
 (import 'org.openqa.selenium.phantomjs.PhantomJSDriver
         'org.openqa.selenium.remote.DesiredCapabilities)
@@ -12,7 +12,6 @@
   (html/select
    (html/html-snippet (get-html-from-phantomjs-memoize url))
    selector))
-
 
 ;; ----------------- movie
 (defn- movie-id [week-movies i]

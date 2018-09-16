@@ -1,5 +1,5 @@
 (ns alloglurp.core
-  (:require [alloglurp.allo-scrapper.scrapper-helper :as scrapper-helper]
-            [alloglurp.allo-scrapper.browse-movies]))
+  (:require alloglurp.process.allocine-scrapper.movie-list
+            [alloglurp.service.scrapper.scrapper-helper :as scrapper-helper]))
 
 (scrapper-helper/open-browser)

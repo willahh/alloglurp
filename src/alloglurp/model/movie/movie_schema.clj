@@ -1,6 +1,6 @@
-(ns alloglurp.movie-schema
-  (:require [korma.core :refer :all]
-            [alloglurp.db]
+(ns alloglurp.model.movie.movie-schema
+  (:require alloglurp.service.db.db
+            [korma.core :refer :all]
             [wlh.helper.db-helper :as db-helper]))
 
 (def allo-movie-table-config
@@ -22,7 +22,7 @@
 
 (defentity allo-movie
   (table :allo_movie)
-  (database alloglurp.db/alloglurp)
+  (database alloglurp.service.db.db/alloglurp)
   (entity-fields :id :alloid :createDate :updateDate :createDate :title :description :genre :imageUrl :pressEval :specEval))
 
 (defn now []
