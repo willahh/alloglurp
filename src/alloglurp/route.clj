@@ -22,9 +22,9 @@
 (def site-routes
   (wrap-defaults
    (routes
-    
+    (GET "/a" [params :as r] (pr-str r))
     (context "/site" []
-             (GET "/" [params session] (home/get-html session params))
+             (GET "/" request (home/get-html request))
              (context "/movie" []
                       (GET "/" [] "aa")
                       (GET "/:alloid" [alloid] "bb"))))
