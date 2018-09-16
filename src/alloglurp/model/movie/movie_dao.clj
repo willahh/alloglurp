@@ -9,3 +9,9 @@
 
 (defn find-list []
   (select movie-schema/allo-movie))
+
+(defn find-by-alloid [alloid]
+  (first (select movie-schema/allo-movie
+                 (where {:alloid alloid}))))
+
+

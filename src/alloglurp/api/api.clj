@@ -6,10 +6,16 @@
             [compojure.route :as route]
             [alloglurp.model.movie.movie-dao :as movie-dao]))
 
-(defroutes app-route
-  (GET "/api/" [] "Hello dude")
-  (GET "/api/movie/" [] (movie-dao/find-list)))
+;; (defroutes api-route
 
-(def app
-  (-> (handler/site app-route)
-      (wrap-json-response)))
+
+;;   (route/not-found "Not Found"))
+
+(def api-routes
+  (wrap-json-response
+   (context "/api" []
+            (GET "/" [] "/api")
+            (context "/movie" []
+                     (GET "/" [] (movie-dao/find-list))
+                     (GET "/:alloid" [alloid] (movie-dao/find-by-alloid alloid))))))
+;; (response-dao/find-by-alloid 4966)

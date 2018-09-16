@@ -13,6 +13,10 @@
                  [compojure "1.6.1"]
                  [ring "1.6.3"]
                  [cheshire "5.8.0"]
-                 [ring/ring-json "0.4.0"]]
+                 [ring/ring-json "0.4.0"]
+                 [ring/ring-defaults "0.3.1"]
+                 [clj-http "3.9.1"]
+                 [hiccup "1.0.5"]]
   :plugins [[lein-ring "0.7.3"]]
-  :ring {:handler alloglurp.api.api/app})
+  :ring {:handler alloglurp.route/app})
+
