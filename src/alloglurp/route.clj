@@ -1,42 +1,53 @@
 (ns alloglurp.route
-  (:use compojure.core)
-  (:require [ring.util.response :refer [response]]
-            [ring.middleware.json :refer [wrap-json-response]]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [compojure.handler :as handler]
-            [compojure.route :as route]
+  (:require [alloglurp.api.api :as api]
             [alloglurp.front.home :as home]
-            [alloglurp.api.api :as api]))
-
-;; (use 'ring.middleware.resource
-;;      'ring.middleware.defaults
-;;      'ring.util.response
-;;      'ring.middleware.session.cookie
-;;      'ring.middleware.session
-;;      'ring.middleware.flash
-;;      'ring.middleware.content-type
-;;      'ring.middleware.not-modified
-;;      'ring.middleware.params
-;;      'ring.middleware.keyword-params)
+            [alloglurp.service.session.session :refer [wrap-site-route]]
+            [compojure.core :refer :all]
+            [compojure.route :as route]
+            [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
+            [ring.middleware.session :refer [wrap-session]]))
 
 (def site-routes
   (wrap-defaults
    (routes
     (GET "/a" [params :as r] (pr-str r))
+
+    (context "/site/b/c" []
+             (GET "/" request
+                  (pr-str request)))
+    
     (context "/site" []
-             (GET "/" request (home/get-html request))
+             (GET "/" request
+                  (pr-str request))
+
+             (context "/test/list" []
+                      (GET "/" request
+                           (-> (home/get-html request)
+                               (wrap-site-route request))))
+
              (context "/movie" []
-                      (GET "/" [] "aa")
-                      (GET "/:alloid" [alloid] "bb"))))
+                      (GET "/" request
+                           (-> (home/get-html request)
+                               (wrap-site-route request)))
+                      (GET "/:alloid" request
+                           (-> (home/get-html request)
+                               (wrap-site-route request))))
+
+             (GET "/test" request
+                  (-> (home/get-html request)
+                      (wrap-site-route request)))
+             ))
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defroutes main-route
   ;; (route/resources "/")
   site-routes
   api/api-routes
+  
   (route/not-found "Not Found"))
 
 (def app
-  (routes main-route))
+  (-> (routes main-route)
+      (wrap-session)))
 
 

@@ -3,7 +3,9 @@
             [alloglurp.front.main :as main]
             [alloglurp.model.movie.movie-dao :as movie-dao]
             [alloglurp.process.movie.movie :as movie]
-            [wlh.helper.string-helper :refer [ellipsis]]))
+            [wlh.helper.string-helper :refer [ellipsis]]
+            [clojure.string :as str]
+            [alloglurp.service.session.session :refer [merge-params-session]]))
 
 (defn map-movie-record-to-card-record [movie-record]
   {:id (:alloid movie-record)
@@ -20,12 +22,7 @@
              (apply card/card-html (map #(second %) html-record))])
           html-records))])
 
-
 (def genre '("Action" "Animation" "Aventure" "Biopic" "Comédie" "Comédie dramatique" "Comédie musicale" "Drame" "Epouvante-horreur" "Fantastique" "Guerre" "Historique" "Policier" "Péplum" "Romance" "Science fiction" "Thriller" "Western"))
-
-
-
-
 
 (defn- filter-html []
   [:form.ui.form {:id "filter-fom"}
@@ -67,28 +64,40 @@
           [:span g]])
        ]]]]])
 
+(defn debug-html [context session params page-params]
+  [:div {:style "padding-top: 40px;"}
+   [:div "context"
+    [:div (pr-str context)]]
+   [:div "params"
+    [:div (pr-str params)]]
+   [:div
+    [:div "session"
+     [:div (pr-str session)]]
+    [:div "page-params"
+     [:div (pr-str page-params)]]]])
+
 (defn get-html [request]
-  (let [params (:params request)
-        session (:session request)
-        genre (:genre params)]
+  (let [{session :session params :params} request
+        genre (:genre params)
+        page-params (merge-params-session (:context request) params session)]
     (main/front-page-html-wrapper
      session params
      [:div {:style "padding-top: 20px;"}
+      (debug-html (:context request) session params page-params)
       (filter-html)
+
       ;; [:div
       ;;  (for [genre '("Action" "Animation" "Aventure" "Biopic" "Comédie" "Comédie dramatique" "Comédie musicale" "Drame" "Epouvante-horreur" "Fantastique" "Guerre" "Historique" "Policier" "Péplum" "Romance" "Science fiction" "Thriller" "Western")]
       ;;    (do [:div [:h3 genre]
       ;;         (card-list-html (movie-dao/find-list 0 3 :alloid :ASC {:genre genre}))]))]
+      
       (if genre
         [:div
          (card-list-html (movie-dao/find-list 0 3 :alloid :ASC {:genre genre}))]
         [:div
          (card-list-html (movie-dao/find-list 0 10 :alloid :ASC))])
       
-      [:div {:style "padding-top: 40px;"}
-       (pr-str params)]
-      [:div
-       (pr-str session)]])))
+      
+      ])))
 
 
-(get-html {:params {}})
