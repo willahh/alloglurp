@@ -7,6 +7,19 @@ Process:
  - A single request is made for each different url then cached
  - Html is returned and parsed into Clojure data
 
+** Install
+#+BEGIN_SRC sh
+git clone https://www.github.com/willahh/alloglurp
+git clone https://www.github.com/willahh/alloglurp_ressources
+#+END_SRC
+
+** Launch
+#+BEGIN_SRC sh
+lein ring server
+#+END_SRC
+
+
+
 ** Usage
 #+BEGIN_SRC clojure
   (get-week-movies)
