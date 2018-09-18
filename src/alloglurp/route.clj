@@ -10,8 +10,6 @@
 (def site-routes
   (wrap-defaults
    (routes
-    (GET "/a" [params :as r] (pr-str r))
-
     (context "/site/b/c" []
              (GET "/" request
                   (pr-str request)))
