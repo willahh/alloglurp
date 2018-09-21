@@ -31,9 +31,7 @@
                            (-> (home/get-html request)
                                (wrap-site-route request))))
 
-             (GET "/test" request
-                  (-> (home/get-html request)
-                      (wrap-site-route request)))
+             
              ))
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
