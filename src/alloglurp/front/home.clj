@@ -6,7 +6,7 @@
             [wlh.helper.string-helper :refer [ellipsis]]
             [clojure.string :as str]
             [alloglurp.service.session.session :refer [merge-params-session]]
-            ))
+            [alloglurp.process.crud.list :as crud-list]))
 
 (def *genre* '("Western" "Fantastique" "Comédie" "Péplum" "Drame" "Epouvante-horreur"
                "Thriller" "Guerre" "Comédie dramatique" "Comédie musicale" "Biopic"
@@ -107,54 +107,28 @@
 (defn get-html [request]
   (let [{session :session params :params} request
         page-params (merge-params-session (:context request) params session)
+
+        
         genre (:genre page-params)
-        genre-list (str/split genre #",")]
+        genre-list (if genre
+                     (str/split genre #",")
+                     ["Aventure"])
+        path "/site/movie"
+        page (Integer. (:page page-params))
+        limit (Integer. (:limit page-params))
+        count (movie-dao/enable-count)
+        offset (get-pagination-offset page limit count)
+        criteria-list `((korma.core/where (~'or ~@(map (fn [m]
+                                                         {:genre m}) genre-list)))
+                        ;; (korma.core/where (~'and {:pressEval "3,9"}))
+                        )
+        records (movie-dao/find-list offset limit :alloid :ASC criteria-list)]
     (main/front-page-html-wrapper
      session params
      [:div {:style "padding-top: 20px;"}
+      ;; [:div offset]
       (debug-html (:context request) session params page-params)
       (filter-html page-params)
-      
-      (let [path ""
-            page 1
-            limit 10
-            count 100
-            offset (get-pagination-offset page limit count)]
-        (pagination-html path page offset limit count))
-      
-      (if genre-list
-        [:div
-         (let [
-               ;; criteria-list (concat '()
-               ;;                       '((korma.core/where (and {:pressEval "3,9"}))
-               ;;                         (korma.core/where (or {:genre "Aventure"} {:genre "Action"}))))
-               
-               ;; criteria-list (concat '()
-               ;;                       '((korma.core/where (and {:pressEval "3,9"}))
-               ;;                         (korma.core/where (concat '() '(or)
-               ;;                                                   (map (fn [m]
-               ;;                                                          {:genre m}) genre-list))
-               ;;                                           (or (= :genre "Aventure")
-               ;;                                               (= :genre "Action")))))
-
-               criteria-list `((korma.core/where (~'or ~@(map (fn [m]
-                                                                {:genre m}) genre-list)))
-                               ;; (korma.core/where (~'and {:pressEval "3,9"}))
-                               )
-
-
-               offset -1
-               limit -1
-               records (movie-dao/find-list
-                        offset limit :alloid :ASC 
-                        criteria-list)]
-
-           ;; records
-           (card-list-html records)
-           ;; (pr-str criteria-list)
-           )
-
-         ]
-        [:div
-         (card-list-html (movie-dao/find-list 0 10 :alloid :ASC))])])))
-
+      [:div
+       (crud-list/filter-option-html {:limit 10 :q "t"} path page offset limit count)
+       (card-list-html records)]])))

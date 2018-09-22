@@ -11,6 +11,8 @@
 (defn find-by-alloid [alloid]
   (first (select movie-schema/allo-movie
                  (where {:alloid alloid}))))
+(defn enable-count []
+  (count (select movie-schema/allo-movie)))
 
 (defn find-list
   ([]
