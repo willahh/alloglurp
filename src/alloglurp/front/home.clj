@@ -49,17 +49,25 @@
          [:span {:class "item" } "..."])
        [:a {:class (str "item" (when (= page end-list) " active")) :href (str path "?page=" page-count)} page-count]])))
 
-(defn debug-html [context session params page-params]
+(defn debug-html [request context session params page-params count offset limit total]
   [:div {:style "padding-top: 40px;"}
    [:div "context"
     [:div (pr-str context)]]
+   [:div "request"
+    [:div (pr-str request)]]
    [:div "params"
     [:div (pr-str params)]]
    [:div
     [:div "session"
      [:div (pr-str session)]]
     [:div "page-params"
-     [:div (pr-str page-params)]]]])
+     [:div (pr-str page-params)]]
+    [:div
+     [:div
+      "count: "(pr-str count)
+      "offset: " (pr-str offset)
+      "limit: "(pr-str limit)
+      "total:" (pr-str total)]]]])
 
 (defn- filter-html [page-params]
   (let [genre (:genre page-params)]
@@ -94,33 +102,18 @@
             [:span g]])]]]]]))
 
 (defn get-html [request]
-  (let [{session :session params :params} request
+  (let [session (:session request)
+        params (:params request)
         page-params (merge-params-session (:context request) params session)
         context (:context request)
-
-
-        
-        genre (or (:genre page-params) "Action")
-        genre-list (or (str/split genre #",") ["Aventure"])
-        
         page (Integer. (or (:page page-params) 1))
-        limit (Integer. (or (:limit page-params) 10))
-        order :alloid
-        asc :ASC
-        
-        ;; page-params (merge page-params {:genre genre :page page :limit limit})
-        
-        
-        count (movie-dao/enable-count)
-        offset (get-pagination-offset page limit count)
-        criteria-list `((korma.core/where (~'or ~@(map (fn [m]
-                                                         {:genre m}) genre-list)))
-                        ;; (korma.core/where (~'and {:pressEval "3,9"}))
-                        )
-        records (movie-dao/find-list offset limit order asc criteria-list)]
-
+        {total :total
+         count :count
+         records :records
+         offset :offset
+         limit :limit} (movie-dao/find-list-for-home session page-params)]
     (-> [:div {:style "padding-top: 20px;"}
-         (debug-html (:context request) session params page-params)
+         (debug-html request context session params page-params count offset limit total)
          (filter-html page-params)
          [:div
           (crud-list/filter-option-html {:limit 10 :q "t"} context page offset limit count)

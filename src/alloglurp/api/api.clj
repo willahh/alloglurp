@@ -22,18 +22,8 @@
            (context "/movie" []
                     (GET "/" request
                          (let [session (:session request)
-                               params (query-string-to-params (:query-string request))
-                               
-                               offset (Integer. (or (:offset params) 1))
-                               limit (Integer. (or (:limit params) 10))
-                               order :alloid
-                               asc :ASC
-                               
-                               count (movie-dao/enable-count)
-                               records (doall (movie-dao/find-list
-                                               offset limit order asc))]
-                           (generate-string {:count count
-                                             :records records}))))))
+                               params (query-string-to-params (:query-string request))]
+                           (generate-string (movie-dao/find-list-for-home session params)))))))
 
 (def api-routes
   (-> (handler/api app-routes)

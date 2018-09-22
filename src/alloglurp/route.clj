@@ -10,19 +10,9 @@
 (def site-routes
   (wrap-defaults
    (routes
-    (context "/site/b/c" []
-             (GET "/" request
-                  (pr-str request)))
-    
     (context "/site" []
              (GET "/" request
                   (pr-str request))
-
-             (context "/test/list" []
-                      (GET "/" request
-                           (-> (home/get-html request)
-                               (wrap-site-route request))))
-
              (context "/movie" []
                       (GET "/" request
                            (-> (home/get-html request)
@@ -30,9 +20,14 @@
                       (GET "/:alloid" request
                            (-> (home/get-html request)
                                (wrap-site-route request))))
+             (context "/movie2" []
+                      (GET "/" request
+                           (-> (home/get-html request)
+                               (wrap-site-route request))))
 
              
-             ))
+             )
+    )
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defroutes main-route

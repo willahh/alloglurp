@@ -39,12 +39,12 @@
          [:span {:class "item" } "..."])
        [:a {:class (str "item" (when (= page end-list) " active")) :href (str path "?page=" page-count)} page-count]])))
 
-(defn filter-option-html [state path page offset limit count]
+(defn filter-option-html [state path page offset limit total]
   [:div.row
    [:div.column
     [:div.ui.grid
      ;; (get-bulk-action-html path)
-     (pagination-html path page offset limit count)
+     (pagination-html path page offset limit total)
      
      [:form {:class "left floated" :method "get" :action ""}
       [:input {:type "hidden" :name "page" :value 1}]
