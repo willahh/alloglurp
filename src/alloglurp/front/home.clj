@@ -76,17 +76,6 @@
        [:input
         {:name "genre", :type "hidden" :value genre :onchange "on_filter_change(event);"}]
        [:i.filter.icon]
-
-       ;; (when genre
-       ;;   (let [genre-list (str/split genre #",")]
-       ;;     (for [genre genre-list]
-       ;;       [:a.ui.label.transition.visible
-       ;;        {:data-value "Animation", :style "display: inline-block !important;"}
-       ;;        [:div.ui.red.empty.circular.label]
-       ;;        [:span
-       ;;         genre]
-       ;;        [:i.delete.icon]])))
-       
        [:span.text
         "Filter Posts"]
        [:div.menu
@@ -107,28 +96,33 @@
 (defn get-html [request]
   (let [{session :session params :params} request
         page-params (merge-params-session (:context request) params session)
+        context (:context request)
+
 
         
-        genre (:genre page-params)
-        genre-list (if genre
-                     (str/split genre #",")
-                     ["Aventure"])
-        path "/site/movie"
-        page (Integer. (:page page-params))
-        limit (Integer. (:limit page-params))
+        genre (or (:genre page-params) "Action")
+        genre-list (or (str/split genre #",") ["Aventure"])
+        
+        page (Integer. (or (:page page-params) 1))
+        limit (Integer. (or (:limit page-params) 10))
+        order :alloid
+        asc :ASC
+        
+        ;; page-params (merge page-params {:genre genre :page page :limit limit})
+        
+        
         count (movie-dao/enable-count)
         offset (get-pagination-offset page limit count)
         criteria-list `((korma.core/where (~'or ~@(map (fn [m]
                                                          {:genre m}) genre-list)))
                         ;; (korma.core/where (~'and {:pressEval "3,9"}))
                         )
-        records (movie-dao/find-list offset limit :alloid :ASC criteria-list)]
-    (main/front-page-html-wrapper
-     session params
-     [:div {:style "padding-top: 20px;"}
-      ;; [:div offset]
-      (debug-html (:context request) session params page-params)
-      (filter-html page-params)
-      [:div
-       (crud-list/filter-option-html {:limit 10 :q "t"} path page offset limit count)
-       (card-list-html records)]])))
+        records (movie-dao/find-list offset limit order asc criteria-list)]
+
+    (-> [:div {:style "padding-top: 20px;"}
+         (debug-html (:context request) session params page-params)
+         (filter-html page-params)
+         [:div
+          (crud-list/filter-option-html {:limit 10 :q "t"} context page offset limit count)
+          (card-list-html records)]]
+        (main/wrap-page-html request))))

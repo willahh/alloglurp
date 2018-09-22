@@ -36,10 +36,8 @@
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defroutes main-route
-  ;; (route/resources "/")
   site-routes
   api/api-routes
-  
   (route/not-found "Not Found"))
 
 (def app

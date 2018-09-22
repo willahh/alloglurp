@@ -11,6 +11,7 @@
 (defn find-by-alloid [alloid]
   (first (select movie-schema/allo-movie
                  (where {:alloid alloid}))))
+
 (defn enable-count []
   (count (select movie-schema/allo-movie)))
 
@@ -36,14 +37,3 @@
          sch `(korma.core/select* movie-schema/allo-movie)
          b# (conj a# `(offset ~p-offset) `(limit ~p-limit) sch `->)]
      (korma.core/exec (eval b#)))))
-
-;; Some test
-;; (find-list)
-;; (find-list 1 3)
-;; (find-list 1 3 :alloid :ASC)
-;; (find-list 1 3 :alloid :ASC)
-;; (find-list -1 -1 :alloid :ASC '(where (or {:genre "Aventure"}
-;;                                           {:genre "Action"})))
-;; (find-list 1 3 :alloid :ASC )
-
-

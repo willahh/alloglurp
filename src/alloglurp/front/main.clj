@@ -42,7 +42,7 @@
    [:i {:class "right chevron icon divider"}]
    [:a.section "List"]])
 
-(defn front-page-html-wrapper [session params html]
+(defn wrap-page-html [html request]
   "Html wrapper for all admin pages."
   (str "<!DOCTYPE html>\n"
        (core/html
@@ -51,5 +51,4 @@
          [:body
           [:div (header-html)]
           [:div {:class "ui container"}
-           ;; (breadcrumb-html)
            html]]])))
