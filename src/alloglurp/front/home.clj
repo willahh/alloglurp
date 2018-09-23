@@ -27,6 +27,7 @@
             [:div {:class "column"}
              (apply card/card-html (map #(second %) html-record))])
           html-records))])
+
 (defn get-pagination-offset [page limit count]
   "Get pagination offset from page number, limit and table rows count."
   (* (- page 1) limit))
@@ -119,3 +120,6 @@
           (crud-list/filter-option-html {:limit 10 :q "t"} context page offset limit count)
           (card-list-html records)]]
         (main/wrap-page-html request))))
+
+
+

@@ -39,10 +39,6 @@
          b# (conj a# `(offset ~p-offset) `(limit ~p-limit) sch `->)]
      (korma.core/exec (eval b#)))))
 
-
-
-
-
 (defn query-string-to-params [query-string]
   (if query-string
     (->> (str/split query-string #"&") 
@@ -75,16 +71,10 @@
 
 
 
-(find-list-for-home {} {:offset 1 :limit 2 :genre "Action,Aventure"})
-(find-list-for-home {} {:offset 1 :limit -1 :genre "Aventure"})
-(find-list-for-home {} {:offset 1 :limit -1 :genre "Animation"})
-(find-list-for-home {} {:offset 1 :limit 2 :genre "Animation"})
-(find-list-for-home {} {:offset 2 :limit 2 :genre "Animation"})
-(find-list-for-home {} {:offset 1 :limit -1})
 
-
-
-
-(def aa "")
-(def aa "b")
-aa
+;; (find-list-for-home {} {:offset 1 :limit 2 :genre "Action,Aventure"})
+;; (find-list-for-home {} {:offset 1 :limit -1 :genre "Aventure"})
+;; (find-list-for-home {} {:offset 1 :limit -1 :genre "Animation"})
+;; (find-list-for-home {} {:offset 1 :limit 2 :genre "Animation"})
+;; (find-list-for-home {} {:offset 2 :limit 2 :genre "Animation"})
+;; (find-list-for-home {} {:offset 1 :limit -1})

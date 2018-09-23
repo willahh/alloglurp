@@ -14,7 +14,7 @@
 (defentity allo-movie-id
   (table :allo_movie_id)
   (database alloglurp)
-  (entity-fields :id :alloid :movieStatusId :name :url))
+  (entity-fields :id :alloid :movieStatusId :name))
 
 (try (db-helper/create-table alloglurp.service.db.db/db
                              (:name allo-movie-id-table-config)
@@ -25,6 +25,9 @@
   {:alloid (:id data)
    :name (:name data)
    :url (:url data)})
+
+(defn find-list []
+  (select allo-movie-id))
 
 (defn insert! [record]
   "Insert a record into database."

@@ -11,23 +11,17 @@
   (wrap-defaults
    (routes
     (context "/site" []
-             (GET "/" request
-                  (pr-str request))
              (context "/movie" []
                       (GET "/" request
                            (-> (home/get-html request)
-                               (wrap-site-route request)))
+                               ))
                       (GET "/:alloid" request
                            (-> (home/get-html request)
                                (wrap-site-route request))))
              (context "/movie2" []
                       (GET "/" request
                            (-> (home/get-html request)
-                               (wrap-site-route request))))
-
-             
-             )
-    )
+                               (wrap-site-route request))))))
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defroutes main-route

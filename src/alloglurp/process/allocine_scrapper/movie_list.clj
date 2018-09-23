@@ -3,6 +3,7 @@
             [alloglurp.model.movie.movie-schema :as movie-schema]
             [alloglurp.model.movieid.movieid-dao :as movieid-dao]
             [alloglurp.model.movieid.movieid-status-constant :as movieid-status-constant]
+            [alloglurp.process.movie.movie :as movie]
             [alloglurp.process.allocine-scrapper.movie-detail :as movie-detail]
             [alloglurp.service.scrapper.scrapper-helper :as scrapper-helper]
             [clojure.string :as str]
@@ -54,6 +55,7 @@
                 movie-record (movie-schema/map-allo-data-to-record movie-html-row)]
             (movieid-dao/update-movie-status-id alloid movieid-status-constant/insert)
             (movie-dao/insert! movie-record)
+            (movie/create-thumb-image-from-alloid alloid)
             (movieid-dao/update-movie-status-id alloid movieid-status-constant/finish)))))))
 
 (defn proceed-by-10 []
@@ -63,3 +65,6 @@
     (dotimes [i 10]
       (find-next-pending-movie-retrieve-content-and-insert))
     "Finish"))
+
+(proceed-by-10)
+

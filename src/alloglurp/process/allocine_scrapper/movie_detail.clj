@@ -160,6 +160,17 @@
       (html/select [:.meta-body-item (html/attr= :itemprop "genre")])
       first :content first cleanup))
 
+
+;; (take)
+;; (open-browser)
+;; (let [url (str/join ["http://www.allocine.fr/film/fichefilm_gen_cfilm=" 235589 ".html"])
+;;       ;; (html/html-snippet (get-html-from-phantomjs ))
+
+;;       ]
+;;   (to "http://www.google.com")
+;;   (take-screenshot :file "a.png")
+;;   url)
+
 (defn get-movie-detail [movie-id]
   (let [url (str/join ["http://www.allocine.fr/film/fichefilm_gen_cfilm=" movie-id ".html"])
         movie-detail (html/html-snippet (get-html-from-phantomjs-memoize url))]

@@ -1,7 +1,6 @@
 (ns alloglurp.model.movie.movie-schema
   (:use [korma.core])
   (:require alloglurp.service.db.db
-            ;; [korma.core :refer :all]
             [wlh.helper.db-helper :as db-helper]))
 
 (def allo-movie-table-config
@@ -15,6 +14,7 @@
                                {:name "director" :type "text"}
                                {:name "genre" :type "text"}
                                {:name "imageUrl" :type "text"}
+                               {:name "thumb" :type "text"}
                                {:name "pressEval" :type "text"}
                                {:name "specEval" :type "text"}]))
 
@@ -24,7 +24,7 @@
 (defentity allo-movie
   (table :allo_movie)
   (database alloglurp.service.db.db/alloglurp)
-  (entity-fields :id :alloid :createDate :updateDate :createDate :title :description :genre :imageUrl :pressEval :specEval))
+  (entity-fields :id :alloid :createDate :updateDate :createDate :title :description :genre :imageUrl :thumb :pressEval :specEval))
 
 (defn now []
   (.format (new java.text.SimpleDateFormat "yyyy-MM-dd hh:mm:ss")
