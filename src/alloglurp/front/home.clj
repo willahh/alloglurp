@@ -20,12 +20,12 @@
    :image (str/join ["../" (movie/get-image-path-from-alloid (:alloid movie-record))])
    :meta (:genre movie-record)})
 
-(defn- card-list-html [records]
+(defn- card-list-html [context records]
   [:div {:class "ui stackable six column grid"}
    (let [html-records (map map-movie-record-to-card-record records)]
      (map (fn [html-record]
             [:div {:class "column"}
-             (apply card/card-html (map #(second %) html-record))])
+             (apply card/card-html context (map #(second %) html-record))])
           html-records))])
 
 (defn get-pagination-offset [page limit count]
@@ -118,7 +118,7 @@
          (filter-html page-params)
          [:div
           (crud-list/filter-option-html {:limit 10 :q "t"} context page offset limit count)
-          (card-list-html records)]]
+          (card-list-html context records)]]
         (main/wrap-page-html request))))
 
 

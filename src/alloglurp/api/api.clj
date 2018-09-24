@@ -5,6 +5,7 @@
             [compojure.handler :as handler]
             [compojure.route :as route]
             [alloglurp.model.movie.movie-dao :as movie-dao]
+            [alloglurp.process.movie.movie :as movie]
             [clojure.string :as str]
             [cheshire.core :refer :all]))
 
@@ -19,6 +20,9 @@
 
 (defroutes app-routes
   (context "/api" []
+           (context "/scrap" []
+                    (GET "/" [query]
+                         (movie/find-movie-from-alloid-fetch-content-and-insert (movie/find-movie-id-from-query query))))
            (context "/movie" []
                     (GET "/" request
                          (let [session (:session request)

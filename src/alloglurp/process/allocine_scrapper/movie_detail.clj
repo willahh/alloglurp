@@ -1,7 +1,5 @@
-(ns alloglurp.process.allocine-scrapper.movie-detail 
+(ns alloglurp.process.allocine-scrapper.movie-detail
   (:require [alloglurp.service.scrapper.scrapper-helper :refer :all]
-            [clj-webdriver.driver :refer :all]
-            [clj-webdriver.taxi :refer :all]
             [clojure.string :as str]
             [net.cgrand.enlive-html :as html]))
 
@@ -160,17 +158,6 @@
       (html/select [:.meta-body-item (html/attr= :itemprop "genre")])
       first :content first cleanup))
 
-
-;; (take)
-;; (open-browser)
-;; (let [url (str/join ["http://www.allocine.fr/film/fichefilm_gen_cfilm=" 235589 ".html"])
-;;       ;; (html/html-snippet (get-html-from-phantomjs ))
-
-;;       ]
-;;   (to "http://www.google.com")
-;;   (take-screenshot :file "a.png")
-;;   url)
-
 (defn get-movie-detail [movie-id]
   (let [url (str/join ["http://www.allocine.fr/film/fichefilm_gen_cfilm=" movie-id ".html"])
         movie-detail (html/html-snippet (get-html-from-phantomjs-memoize url))]
@@ -211,29 +198,5 @@
                          (html/select [:.card-movie-overview :.thumbnail-img])
                          first :attrs :src)
                      (catch Exception e "-"))}))
-
-
-
-;; --------------- Search movie
-(def movie-search (html/html-snippet
-                   (get-html-from-phantomjs-memoize
-                    "http://www.allocine.fr/recherche/?q=las+vegas+parano")))
-
-(defn find-movie-id-from-query [query]
-  (let [url (str/join ["http://www.allocine.fr/recherche/?q=" (str/replace query " " "+")])
-        movie (html/html-snippet
-               (get-html-from-phantomjs-memoize url))
-        found-url (-> 
-                   (filter (fn [m]
-                             (and (:href m)
-                                  (re-find #"/film/fichefilm_gen_cfilm=(\w+).html" (:href m))))
-                           (let [links (map #(:attrs %) (-> movie
-                                                            (html/select [:.rubric :.totalwidth :a])))]
-                             links))
-                   distinct first :href)]
-    (when-let [id (re-find #"/film/fichefilm_gen_cfilm=(\d+).html" found-url)]
-      (second id))))
-
-
 
 

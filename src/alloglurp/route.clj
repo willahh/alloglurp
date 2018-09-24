@@ -1,6 +1,7 @@
 (ns alloglurp.route
   (:require [alloglurp.api.api :as api]
             [alloglurp.front.home :as home]
+            [alloglurp.front.movie.detail :as movie-detail]
             [alloglurp.service.session.session :refer [wrap-site-route]]
             [compojure.core :refer :all]
             [compojure.route :as route]
@@ -16,12 +17,9 @@
                            (-> (home/get-html request)
                                ))
                       (GET "/:alloid" request
-                           (-> (home/get-html request)
+                           (-> (movie-detail/get-html request)
                                (wrap-site-route request))))
-             (context "/movie2" []
-                      (GET "/" request
-                           (-> (home/get-html request)
-                               (wrap-site-route request))))))
+             ))
    (assoc-in site-defaults [:security :anti-forgery] false)))
 
 (defroutes main-route
