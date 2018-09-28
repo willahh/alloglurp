@@ -99,6 +99,6 @@
       (find-next-pending-movie-retrieve-content-and-insert))
     "Finish"))
 
-;; (find-movie-from-alloid-fetch-content-and-insert (find-movie-id-from-query "Captain marvel"))
+(find-movie-from-alloid-fetch-content-and-insert (find-movie-id-from-query "Captain marvel"))
 
 
